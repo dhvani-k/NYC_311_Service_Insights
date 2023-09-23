@@ -37,8 +37,6 @@ The project leverages [data](https://data.cityofnewyork.us/Social-Services/311-S
 
 ## Pipeline Blueprint
 
-![Pipeline Architecture](/utilities/images/architecture-diagram.png)
-
 The pipeline is triggered every time code updates are pushed to the main branch. This action, facilitated by Github Actions, builds a new Docker `flows` image, updates the Artifact Registry, and refreshes the CloudRunJob Prefect block with the latest image.
 
 For a comprehensive understanding of the pipeline's architecture and flow, refer to the provided diagram.
