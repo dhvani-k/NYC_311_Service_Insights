@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: staging
+    database: nyc311
+    schema:
+    tables:
+      - name: complaints

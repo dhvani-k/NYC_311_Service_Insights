@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "nyc_311_stat_pipeline"
+version = "0.1.0"
+description = ""
+authors = ["Dhvani <dhvanikothari03@gmail.com>"]
+readme = "README.md"
+packages = [{include = "nyc_311_stat_pipeline"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+prefect = "^2.7.11"
+prefect-gcp = "^0.2.5"
+
+[tool.poetry.group.flows.dependencies]
+dbt-core = "^1.4.1"
+dbt-bigquery = "^1.4.1"
+pandas = "^1.5.3"
+pandas-gbq = "^0.19.1"
+prefect-dbt = "^0.3.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[virtualenvs]
+in-project = true
+path = "venv"
